@@ -1,0 +1,19 @@
+{
+
+	"manifest_version": 2,
+	"name": "Storm Watcher",
+	"version": "0.2.0",
+	
+	"description": "Breach monitor for ServiceNow. Icon by https://www.iconfinder.com/tmthymllr",
+	"permissions": ["activeTab"],
+	"browser_action": {
+		"default_icon": "icons/iconfinder_view_126581.png"
+	},
+	"content_scripts": [
+		{
+			"matches":["*://oservice.service-now.com/*"],
+			"js": ["stormwatcher.js","refresh.js"]
+		}
+	]
+
+}
